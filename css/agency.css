@@ -692,6 +692,9 @@ ul.social-buttons li a:active {
   font-style: italic;
   font-size: 16px;
 }
+.portfolio-modal .modal-content p.add-info {
+  margin-bottom: 0px;
+}
 .portfolio-modal .modal-content ul.list-inline {
   margin-bottom: 30px;
   margin-top: 0;
