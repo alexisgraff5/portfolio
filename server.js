@@ -10,8 +10,6 @@ const EMAIL_ACCOUNT_USER = config.email;
 const EMAIL_ACCOUNT_PASSWORD = config.password;
 const YOUR_NAME = config.name;
 
-var app = express();
-
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static('public'));
