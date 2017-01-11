@@ -550,6 +550,17 @@ section h3.section-subheading {
 .team-member p {
   margin-top: 0;
 }
+.skill-set {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.skill-set .devicons {
+  font-size: 100px;
+  color: #00BDFD;
+}
+.skill-set p {
+  margin-top: 5px;
+}
 aside.clients img {
   margin: 50px auto;
 }
@@ -583,27 +594,27 @@ section#contact ::-webkit-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #eeeeee;
+  color: #777777;
 }
 section#contact :-moz-placeholder {
   /* Firefox 18- */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #eeeeee;
+  color: #777777;
 }
 section#contact ::-moz-placeholder {
   /* Firefox 19+ */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #eeeeee;
+  color: #777777;
 }
 section#contact :-ms-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #eeeeee;
+  color: #777777;
 }
 section#contact .text-danger {
   color: #e74c3c;
