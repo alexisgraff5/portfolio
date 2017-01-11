@@ -554,9 +554,9 @@ aside.clients img {
   margin: 50px auto;
 }
 section#contact {
-  background-color: #555555;
-  background-image: url('../img/');
-  background-position: bottom;
+  background-color: #222222;
+  background-image: url('../img/map-image.png');
+  background-position: center;
   background-repeat: no-repeat;
 }
 section#contact .section-heading {
