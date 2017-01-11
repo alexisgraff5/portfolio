@@ -253,21 +253,21 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name." ng-model="contact.name">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address." ng-model="contact.email">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number." ng-model="contact.number">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message." ng-model="contact.message"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -330,6 +330,10 @@
                                 <h2>Ecommerce Website</h2>
                                 <p class="item-intro text-muted">Lorem ipsum</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/nixon/individual-watch.png" alt="">
+                                <ul class="list-inline">
+                                    <li>Tech:</li>
+                                    <li>Date: December 2016</li>
+                                </ul>
                                 <p>This is my first complete project. I initially wanted to clone Nixon.com, but decided to keep the project simpler. I am really proud of how the product images change.</p>
                                 <p class="add-info">You can preview the site <a href="http://nixonshop.herokuapp.com/">here</a>. Use the information below to test functionality.</p>
                                 <ul class="list-inline">
@@ -363,6 +367,10 @@
                                 <h2>CloneWars</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                                 <img class="img-responsive img-centered" src="img/portfolio/codewars/training-three.png" alt="">
+                                <ul class="list-inline">
+                                    <li>Tech:</li>
+                                    <li>Date: January 2017</li>
+                                </ul>
                                 <p>For a group project, we chose to clone codewars.com. We were given 2 weeks to complete our project. Codewars.com is a massive website with multiple aspects. We focused solely on the purpose of codewars: unit testing. This choice effected the content we showed in our views. For instance, the home page now is a users dashboard, omitting the social aspect of the clans. You can preview the website <a href="http://code.baert.io/">here</a>.</p>
                                 <p>My responsibility for the group project was connecting the backend to the frontend using Node.js, Express.js, and MySQL.</p>
                                 <p>GitHub Repo: <a href="https://github.com/CodewarsClone/Codewars">Codewars</a>.</p>
