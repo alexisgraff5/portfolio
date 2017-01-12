@@ -20,7 +20,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "http://localhost:80/email",
+                url: "/email",
                 type: "POST",
                 processData: false,
                 contentType: 'application/json',
