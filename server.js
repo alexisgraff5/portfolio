@@ -3,9 +3,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
-var config = require('./server_config.json');
+const config = require('./server_config.json');
 
-const app = module.exports = express();
+const app = express();
 const EMAIL_ACCOUNT_USER = config.email;
 const EMAIL_ACCOUNT_PASSWORD = config.password;
 const YOUR_NAME = config.name;
@@ -14,23 +14,29 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static('public'));
 
-var smtpTransport = nodemailer.createTransport(config.smtp);
+var transporter = nodemailer.createTransport(config.smtp);
 
 app.post('/email', function(req, res, next) {
-  smtpTransport.sendMail({
-    from: `alexisgraff.com`,
-    to: 'lex.graff@gmail.com',
-    subject: 'Message from Portfolio Site',
-    text: `From: ${req.body.name} at ${req.body.email}. ${req.body.message}, and their phone number is ${req.body.number}`
-  }, function(error, response) {
-    if (error) {
-      console.log(error);
-      res.sendStatus(204);
-    } else {
-      res.sendStatus(200);
-    }
-    smtpTransport.close();
-  });
+    let body = req.body;
+    let email = {
+        from: 'lex.graff@gmail.com',
+        to: 'lex.graff@gmail.com',
+        subject: 'contact from your portfolio',
+        text: `You've receive a contact request from ${body.name} 
+email : ${body.email}
+phone : ${body.phone}
+Message : ${body.message}
+`,
+    };
+    transporter.sendMail(email, (err, results) => {
+        if (err) {
+            console.log(err);
+            res.sendStatus(400)
+        }    else {
+            console.log(results);
+            res.sendStatus(200)
+        }
+    })
 });
 
 app.listen(config.port, function() {
