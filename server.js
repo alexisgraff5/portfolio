@@ -14,17 +14,11 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static('public'));
 
-var smtpTransport = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: EMAIL_ACCOUNT_USER,
-    pass: EMAIL_ACCOUNT_PASSWORD
-  }
-});
+var smtpTransport = nodemailer.createTransport(config.smtp);
 
 app.post('/email', function(req, res, next) {
   smtpTransport.sendMail({
-    from: `${YOUR_NAME} ${EMAIL_ACCOUNT_USER}`,
+    from: `alexisgraff.com`,
     to: 'lex.graff@gmail.com',
     subject: 'Message from Portfolio Site',
     text: `From: ${req.body.name} at ${req.body.email}. ${req.body.message}, and their phone number is ${req.body.number}`
